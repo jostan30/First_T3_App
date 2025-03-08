@@ -6,10 +6,19 @@ export default async function Home() {
   const ApiCheck = await api.post.T3();
   void api.post.getLatest.prefetch();
 
+
   return (
     <div className="flex-col">
       <div>{hello?.greeting}</div>
       <div>{ApiCheck?.annonce}</div>
+
+      {
+        //nAVIGATE TO POSTS PAGE
+        <div className="flex justify-center">
+          <a href="/posts">Posts</a>
+        </div>
+      }
+
     </div>
   );
 }

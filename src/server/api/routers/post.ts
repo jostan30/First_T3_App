@@ -12,7 +12,13 @@ const posts: Post[] = [
     id: 1,
     name: "Hello World",
   },
+  {
+    id:2,
+    name:"Jostan is the best",
+  },
 ];
+
+
 
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
@@ -43,5 +49,10 @@ export const postRouter = createTRPCRouter({
     return {
       annonce: `T3 is pretty cool`, 
     }
+  }),
+
+  usePosts : publicProcedure 
+  .query(()=>{
+    return posts;
   })
 });
