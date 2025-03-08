@@ -16,6 +16,7 @@ export default async function Home() {
         //nAVIGATE TO POSTS PAGE
         <div className="flex justify-center">
           <a href="/posts">Posts</a>
+          <a href="/users">Users Login </a>
         </div>
       }
 
