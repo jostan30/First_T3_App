@@ -1,9 +1,6 @@
-import { NextPage } from 'next'
 import { api } from '~/trpc/server'
 
-interface Props {}
-
-const Page: NextPage<Props> = async ({}) => {
+export default async function Posts(){
 
  const posts = await api.post.usePosts();
  console.log(posts);
@@ -26,5 +23,3 @@ const Page: NextPage<Props> = async ({}) => {
     }
   </div>
 }
-
-export default Page
